@@ -6,9 +6,11 @@ using UnityEngine.UI;
 
 public class PrefabLoader : MonoBehaviour
 {
-    
-    public GameObject Card;
+
+    public GameObject CardPrefab1;
+    public GameObject CardPrefab2;
     public GameObject spawn;
+    public GameObject spawn2;
     public Toggle cards1;
     public Toggle cards2;
     //public GameObject test;
@@ -37,16 +39,20 @@ public class PrefabLoader : MonoBehaviour
     {
         if (cards1.isOn)
         {
-            GameObject temp = Instantiate(Card, spawn.transform.position, Quaternion.identity);
+            GameObject temp = Instantiate(CardPrefab1, spawn.transform.position, Quaternion.identity);
             //temp.transform.localScale.
             temp.transform.parent = spawn.transform;
             //temp.Position.x = 0f;
             //temp.transform.localScale.x = 100f;
-            Debug.Log("shut");
+            
         }
         else if (cards2.isOn)
         {
-            Debug.Log("4 Cards");
+            //Debug.Log("entered");
+            GameObject temp = Instantiate(CardPrefab1, spawn.transform.position, Quaternion.identity);
+            temp.transform.parent = spawn.transform;
+            GameObject temp2= Instantiate(CardPrefab2, spawn2.transform.position, Quaternion.identity);
+            temp2.transform.parent = spawn2.transform;
         }
 
         //GameObject temp = Instantiate(Card, spawn.transform.position,Quaternion.identity);
