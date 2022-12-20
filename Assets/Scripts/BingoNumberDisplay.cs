@@ -15,11 +15,31 @@ public class BingoNumberDisplay : MonoBehaviour
         public TextMeshProUGUI bingoNumber;
     }
 
+    CardController cardController;
+    List<int> numbers;
+
     void Start()
+    {
+        numbers = new List<int>();
+        for(int i=1; i<=75; i++)// (int i = (int)cardController.range[0].x; i <= cardController.range[cardController.range.Length].y; i++)
+        {
+            numbers.Add(i);
+        }
+        //InvokeRepeating("Display",2f,10f);
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    void Display()
     {
         for( int i =0; i< bingoDisplay.Count;i++)
         {
-            int temp = Random.Range(0, 75);
+            int temp = numbers[Random.Range(0, numbers.Count)];
+            numbers.Remove(temp);
             bingoDisplay[i].bingoNumber.text = temp.ToString();
             if (temp <= 15)
             {
@@ -42,17 +62,6 @@ public class BingoNumberDisplay : MonoBehaviour
                 bingoDisplay[i].bingoAlphabet.text = "O";
             }
         }
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void Display()
-    {
 
     }
 
