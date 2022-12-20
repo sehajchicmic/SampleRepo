@@ -17,9 +17,11 @@ public class BingoNumberDisplay : MonoBehaviour
 
     CardController cardController;
     List<int> numbers;
+    int totalRolls = 5;
 
     void Start()
     {
+        
         numbers = new List<int>();
         for(int i=1; i<=75; i++)// (int i = (int)cardController.range[0].x; i <= cardController.range[cardController.range.Length].y; i++)
         {
@@ -34,8 +36,16 @@ public class BingoNumberDisplay : MonoBehaviour
         
     }
 
-    void Display()
+    public void Display(TextMeshProUGUI rollsLeft)
     {
+        if(totalRolls==0)
+        {
+            Debug.Log("No Rolls Left");
+            return;
+        }
+
+        totalRolls--;
+        rollsLeft.text = $"{totalRolls} left";
         for( int i =0; i< bingoDisplay.Count;i++)
         {
             int temp = numbers[Random.Range(0, numbers.Count)];

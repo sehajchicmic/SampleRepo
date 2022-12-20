@@ -543,7 +543,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1895062020725695562}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 312525992682940831}
+        m_TargetAssemblyTypeName: BingoNumberDisplay, Assembly-CSharp
+        m_MethodName: Display
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1895062020663233139}
+          m_ObjectArgumentAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1895062020776104206
 GameObject:
   m_ObjectHideFlags: 0
@@ -3685,6 +3697,7 @@ GameObject:
   - component: {fileID: 1895062022031427482}
   - component: {fileID: 1895062022031427484}
   - component: {fileID: 1895062022031427485}
+  - component: {fileID: 3171947648852018863}
   m_Layer: 5
   m_Name: TimerDisplay
   m_TagString: Untagged
@@ -3749,6 +3762,21 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &3171947648852018863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895062022031427483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f9104ac882b4bf8bbd1227545cdf6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeRemaining: 180
+  timerIsRunning: 0
+  timeText: {fileID: 1895062020776104192}
 --- !u!1 &1895062022040395481
 GameObject:
   m_ObjectHideFlags: 0
