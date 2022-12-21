@@ -651,7 +651,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00eeb520b22cf4018a507b5af0caaf6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cards:
   buttons:
   - {fileID: 4096187228150068873}
   - {fileID: 7588649416347396025}
