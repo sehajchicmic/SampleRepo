@@ -193,7 +193,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1895062020620055426}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fff3a29e0550496da9c70f679edb51d, type: 3}
+  m_Script: {fileID: 11500000, guid: e8a1291f04f8243a4a53078415ca68a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bingoDisplay:
@@ -1621,7 +1621,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1895062022031427483}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 24f9104ac882b4bf8bbd1227545cdf6d, type: 3}
+  m_Script: {fileID: 11500000, guid: d721564b1df72490c9a118c21aced993, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   timeRemaining: 180
@@ -2865,7 +2865,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 75
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54ab9e1909a01490dbc75f24209f140b, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 54ab9e1909a01490dbc75f24209f140b, type: 2}
@@ -2892,7 +2892,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 55.45
   m_fontSizeBase: 4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3405,7 +3405,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 75
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54ab9e1909a01490dbc75f24209f140b, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 54ab9e1909a01490dbc75f24209f140b, type: 2}
@@ -3432,7 +3432,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 55.45
   m_fontSizeBase: 4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3887,7 +3887,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 75
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54ab9e1909a01490dbc75f24209f140b, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 54ab9e1909a01490dbc75f24209f140b, type: 2}
@@ -3914,7 +3914,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 55.45
   m_fontSizeBase: 4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4157,7 +4157,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 75
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54ab9e1909a01490dbc75f24209f140b, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 54ab9e1909a01490dbc75f24209f140b, type: 2}
@@ -4184,7 +4184,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 55.45
   m_fontSizeBase: 4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4641,7 +4641,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 75
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54ab9e1909a01490dbc75f24209f140b, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 54ab9e1909a01490dbc75f24209f140b, type: 2}
@@ -4668,7 +4668,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
+  m_fontSize: 55.45
   m_fontSizeBase: 4
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -4743,6 +4743,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 201993568965891911, guid: 392c5fc53ef934eb684d7320951a1718, type: 3}
       propertyPath: m_Inertia
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 201993568965891911, guid: 392c5fc53ef934eb684d7320951a1718, type: 3}
+      propertyPath: m_Horizontal
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 201993568965891911, guid: 392c5fc53ef934eb684d7320951a1718, type: 3}
@@ -6069,6 +6073,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -286.58484
       objectReference: {fileID: 0}
+    - target: {fileID: 7344504310831027266, guid: 392c5fc53ef934eb684d7320951a1718, type: 3}
+      propertyPath: bingoNumberDisplay
+      value: 
+      objectReference: {fileID: 312525992682940831}
     - target: {fileID: 7381890842432961770, guid: 392c5fc53ef934eb684d7320951a1718, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -6285,6 +6293,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -30.429047
       objectReference: {fileID: 0}
+    - target: {fileID: 8106681704688358031, guid: 392c5fc53ef934eb684d7320951a1718, type: 3}
+      propertyPath: bingoNumberDisplay
+      value: 
+      objectReference: {fileID: 312525992682940831}
     - target: {fileID: 8133922522665445248, guid: 392c5fc53ef934eb684d7320951a1718, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -6631,6 +6643,23 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!1 &4486336741469618352 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3757080254460072511, guid: 392c5fc53ef934eb684d7320951a1718, type: 3}
+  m_PrefabInstance: {fileID: 748019659570057871}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &7864433798345061976
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4486336741469618352}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 1
 --- !u!224 &4894356604993109848 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5299963307885456855, guid: 392c5fc53ef934eb684d7320951a1718, type: 3}
@@ -7853,6 +7882,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -5
       objectReference: {fileID: 0}
+    - target: {fileID: 6931547957940091629, guid: 081fa2205345f451da6b76259a518d08, type: 3}
+      propertyPath: bingoNumberDisplay
+      value: 
+      objectReference: {fileID: 312525992682940831}
     - target: {fileID: 6940057315471265762, guid: 081fa2205345f451da6b76259a518d08, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -8213,6 +8246,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -286.09055
       objectReference: {fileID: 0}
+    - target: {fileID: 8457089302041033760, guid: 081fa2205345f451da6b76259a518d08, type: 3}
+      propertyPath: bingoNumberDisplay
+      value: 
+      objectReference: {fileID: 312525992682940831}
     - target: {fileID: 8512660314262670917, guid: 081fa2205345f451da6b76259a518d08, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -8431,6 +8468,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 081fa2205345f451da6b76259a518d08, type: 3}
+--- !u!1 &1328733877031412072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3602582230134226064, guid: 081fa2205345f451da6b76259a518d08, type: 3}
+  m_PrefabInstance: {fileID: 2562105190554852856}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &5516636635207009714
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328733877031412072}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 1
 --- !u!1001 &2562105190754470487
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9630,6 +9684,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -5
       objectReference: {fileID: 0}
+    - target: {fileID: 6931547957940091629, guid: 081fa2205345f451da6b76259a518d08, type: 3}
+      propertyPath: bingoNumberDisplay
+      value: 
+      objectReference: {fileID: 312525992682940831}
     - target: {fileID: 6940057315471265762, guid: 081fa2205345f451da6b76259a518d08, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -9990,6 +10048,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -286.09055
       objectReference: {fileID: 0}
+    - target: {fileID: 8457089302041033760, guid: 081fa2205345f451da6b76259a518d08, type: 3}
+      propertyPath: bingoNumberDisplay
+      value: 
+      objectReference: {fileID: 312525992682940831}
     - target: {fileID: 8512660314262670917, guid: 081fa2205345f451da6b76259a518d08, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -10208,6 +10270,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 081fa2205345f451da6b76259a518d08, type: 3}
+--- !u!1 &1328733877095773895 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3602582230134226064, guid: 081fa2205345f451da6b76259a518d08, type: 3}
+  m_PrefabInstance: {fileID: 2562105190754470487}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &1302761928000310354
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328733877095773895}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 1
 --- !u!1001 &2562105191831749438
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11407,6 +11486,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -5
       objectReference: {fileID: 0}
+    - target: {fileID: 6931547957940091629, guid: 081fa2205345f451da6b76259a518d08, type: 3}
+      propertyPath: bingoNumberDisplay
+      value: 
+      objectReference: {fileID: 312525992682940831}
     - target: {fileID: 6940057315471265762, guid: 081fa2205345f451da6b76259a518d08, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -11767,6 +11850,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -286.09055
       objectReference: {fileID: 0}
+    - target: {fileID: 8457089302041033760, guid: 081fa2205345f451da6b76259a518d08, type: 3}
+      propertyPath: bingoNumberDisplay
+      value: 
+      objectReference: {fileID: 312525992682940831}
     - target: {fileID: 8512660314262670917, guid: 081fa2205345f451da6b76259a518d08, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -11985,3 +12072,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 081fa2205345f451da6b76259a518d08, type: 3}
+--- !u!1 &1328733876018233262 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3602582230134226064, guid: 081fa2205345f451da6b76259a518d08, type: 3}
+  m_PrefabInstance: {fileID: 2562105191831749438}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &2627846993733802538
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1328733876018233262}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 1
