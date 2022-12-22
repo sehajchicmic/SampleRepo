@@ -9,6 +9,11 @@ public class scrollViewSystem : MonoBehaviour
     bool temp2 = false;
     bool temp3 = false;
     bool temp4 = false;
+
+    private void Start()
+    {
+        scrollbar.GetComponent<Scrollbar>().value = 0.0018f;
+    }
     private void Update () {
         if(temp1) {
             scrollbar.GetComponent<Scrollbar> ().value = Mathf.Lerp ( scrollbar.GetComponent<Scrollbar> ().value, 0.0018f, 0.15f );

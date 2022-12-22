@@ -1928,7 +1928,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2562105191276875384}
   m_HandleRect: {fileID: 2562105191276875387}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0.0018000056
   m_Size: 0.24524075
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -4931,7 +4931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1096492872572706675, guid: 392c5fc53ef934eb684d7320951a1718, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1169.4978
+      value: 1165.2876
       objectReference: {fileID: 0}
     - target: {fileID: 1127722229100760540, guid: 392c5fc53ef934eb684d7320951a1718, type: 3}
       propertyPath: m_AnchorMax.x
@@ -10977,6 +10977,10 @@ PrefabInstance:
     - target: {fileID: 3602582230134226064, guid: 081fa2205345f451da6b76259a518d08, type: 3}
       propertyPath: m_Name
       value: CardScreenPanel (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3602582230134226064, guid: 081fa2205345f451da6b76259a518d08, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3638962933378667933, guid: 081fa2205345f451da6b76259a518d08, type: 3}
       propertyPath: m_AnchorMax.y
