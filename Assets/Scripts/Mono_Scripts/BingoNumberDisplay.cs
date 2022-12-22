@@ -1,22 +1,18 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using UnityEngine.UI;
 
 public class BingoNumberDisplay : MonoBehaviour
 {
-    [SerializeField] List<bingo> bingoDisplay = new List<bingo>();
-    // Start is called before the first frame update
+    [SerializeField] public List<bingo> bingoDisplay = new List<bingo>();
 
     [System.Serializable]
-    struct bingo
+    public struct bingo
     {
         public TextMeshProUGUI bingoAlphabet;
         public TextMeshProUGUI bingoNumber;
     }
 
-    //CardController cardController;
     List<int> numbers;
     int totalRolls = 5;
 
@@ -24,17 +20,10 @@ public class BingoNumberDisplay : MonoBehaviour
     {
 
         numbers = new List<int>();
-        for (int i = 1; i <= 75; i++)// (int i = (int)cardController.range[0].x; i <= cardController.range[cardController.range.Length].y; i++)
+        for (int i = 1; i <= 75; i++)
         {
             numbers.Add(i);
         }
-        //InvokeRepeating("Display",2f,10f);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
     }
 
     public void Display(TextMeshProUGUI rollsLeft)
@@ -82,6 +71,7 @@ public class BingoNumberDisplay : MonoBehaviour
         {
             if (i.bingoNumber.text == temp.GetComponentInChildren<TextMeshProUGUI>().text)
             {
+                Debug.Log("Match Found");
                 return true;
             }
         }

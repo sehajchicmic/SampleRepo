@@ -616,7 +616,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 557263546}
   toggleTransition: 1
   graphic: {fileID: 0}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 1843944542}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2540,7 +2540,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1178368959}
   toggleTransition: 1
   graphic: {fileID: 0}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 1843944542}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2819,6 +2819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1291154793}
+  - component: {fileID: 1291154794}
   m_Layer: 0
   m_Name: Scripts Holder
   m_TagString: Untagged
@@ -2841,6 +2842,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1291154794
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291154792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4a1d581adb614c928e4780ee85db878, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bingoNumberDisplay: {fileID: 312525993730818346}
+  MatchedElements: []
 --- !u!1 &1331760771
 GameObject:
   m_ObjectHideFlags: 0
@@ -3489,6 +3504,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1843944540}
   - component: {fileID: 1843944541}
+  - component: {fileID: 1843944542}
   m_Layer: 5
   m_Name: Toggle
   m_TagString: Untagged
@@ -3560,11 +3576,24 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2045932643}
   toggleTransition: 1
   graphic: {fileID: 0}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 1843944542}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_IsOn: 0
+  m_IsOn: 1
+--- !u!114 &1843944542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1843944539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fafe2cfe61f6974895a912c3755e8f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AllowSwitchOff: 0
 --- !u!1 &1894205664
 GameObject:
   m_ObjectHideFlags: 0
@@ -4147,7 +4176,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 403890724}
   toggleTransition: 1
   graphic: {fileID: 0}
-  m_Group: {fileID: 0}
+  m_Group: {fileID: 1843944542}
   onValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -7214,9 +7243,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 312525993730818346}
-        m_TargetAssemblyTypeName: BingoNumberDisplay, Assembly-CSharp
-        m_MethodName: Display
+      - m_Target: {fileID: 1291154794}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: Roll
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 4162154841084390196}
