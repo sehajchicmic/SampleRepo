@@ -11,7 +11,8 @@ public class CardController : MonoBehaviour
     public Vector2[] range;
     public bool[] patternsMatch;
     ArrayList rangeNumbers = new ArrayList();
-    IDictionary<int, GameObject> keyValues = new Dictionary<int, GameObject>();
+    public IDictionary<int, GameObject> keyValues = new Dictionary<int, GameObject>();
+    bool[] pattern;
 
     public struct pair
     {
@@ -21,14 +22,13 @@ public class CardController : MonoBehaviour
 
     public void Start()
     {
-        Debug.Log("Start");
         //Declaration of bool Array
+        pattern = new bool[GameManager.instance.pattern_SO.BingoPatterns.Length];
         patternsMatch = new bool[25];
 
         //Adding List of ranges
         foreach (Vector2 i in range)
         {
-            Debug.Log("List");
             List<int> temp = new List<int>();
             for (int j = (int)i.x; j <= i.y; j++)
             {
@@ -40,7 +40,6 @@ public class CardController : MonoBehaviour
         //Generating Numbers and assigning Onclicks
         for (int i = 0; i < buttons.Count; i++)
         {
-            Debug.Log("Instantiate");
             int rangeNumbersIndex = i % 5;
             List<int> temp = (List<int>)rangeNumbers[rangeNumbersIndex];
             int randomValue = temp[Random.Range(0, temp.Count)];
@@ -60,12 +59,33 @@ public class CardController : MonoBehaviour
     {
         Debug.Log($" game object is {index is null} and index = {i.index} and value = {i.value}");
         Debug.Log(i.index);
-        bool temp = GameManager.instance.MatchChecker(index);
+        bool temp = GameManager.instance.MatchChecker(i.value);
         if (temp)
         {
             index.GetComponent<Image>().color = Color.green;
             index.GetComponent<Button>().enabled = false;
             patternsMatch[i.index] = true;
+            pattern = GameManager.instance.PatternCheck(patternsMatch,pattern);
+            for (int j = 0; j < pattern.Length; j++)
+            {
+                Debug.Log($"Bingo Pattern Matching with Pattern {j} is {pattern[j]}");
+                if(pattern[j])
+                {
+                    BingoLineClear(j);
+                }
+            }
+        }
+    }
+
+    public void BingoLineClear(int Line)
+    {
+        bool[] temp = GameManager.instance.pattern_SO.BingoPatterns[Line].cells;
+        for (int i = 0; i < temp.Length; i++)
+        {
+            if(temp[i]==true)
+            {
+                buttons[i].GetComponent<Image>().color = Color.blue;
+            }
         }
     }
 }

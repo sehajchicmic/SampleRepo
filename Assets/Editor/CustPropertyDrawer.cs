@@ -1,7 +1,5 @@
 using UnityEngine;
 using UnityEditor;
-using System.Collections;
-using static Codice.CM.WorkspaceServer.WorkspaceTreeDataStore;
 
 [CustomPropertyDrawer(typeof(BingoPattern))]
 public class CustPropertyDrawer : PropertyDrawer

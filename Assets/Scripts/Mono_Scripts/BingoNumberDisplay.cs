@@ -15,6 +15,7 @@ public class BingoNumberDisplay : MonoBehaviour
 
     List<int> numbers;
     int totalRolls = 5;
+    int[] ExistingNumbers = new int[] { 0, 0, 0, 0, 0 };
 
     void Start()
     {
@@ -61,15 +62,17 @@ public class BingoNumberDisplay : MonoBehaviour
             {
                 bingoDisplay[i].bingoAlphabet.text = "O";
             }
+            ExistingNumbers[i] = temp;
+            GameManager.instance.AutoDaubing(temp);
         }
 
     }
 
-    public bool MatchChecker(GameObject temp)
+    public bool MatchChecker(int temp)
     {
-        foreach (bingo i in bingoDisplay)
+        foreach (int i in ExistingNumbers)
         {
-            if (i.bingoNumber.text == temp.GetComponentInChildren<TextMeshProUGUI>().text)
+            if (i == temp)
             {
                 Debug.Log("Match Found");
                 return true;
