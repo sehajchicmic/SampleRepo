@@ -93,6 +93,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   card1: {fileID: 8457089302041033760}
   card2: {fileID: 6931547957940091629}
+  cardNumber1: {fileID: 4686211653684409364}
+  cardNumber2: {fileID: 4686211654631754974}
 --- !u!1 &4686211653684409366
 GameObject:
   m_ObjectHideFlags: 0

@@ -32,6 +32,7 @@ public class BingoNumberDisplay : MonoBehaviour
         if (totalRolls == 0)
         {
             Debug.Log("No Rolls Left");
+            GameManager.instance.GameOver();
             return;
         }
 
