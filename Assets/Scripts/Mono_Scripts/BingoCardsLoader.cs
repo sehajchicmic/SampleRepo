@@ -13,6 +13,7 @@ public class BingoCardsLoader : MonoBehaviour
     public GameObject disablebutton78;
     public GameObject disablebutton56;
     public GameObject disablebutton34;
+    public scrollViewSystem scv;
 
     public void LoadPrefab()
     {
@@ -36,6 +37,7 @@ public class BingoCardsLoader : MonoBehaviour
             gameManager.cards.Add(temp1.GetComponent<CardReference>().card2);
             disablebutton56.SetActive(false);
             disablebutton78.SetActive(false);
+            scv.card2 = 1;
         }
         else if(cards3.isOn)
         {
@@ -49,6 +51,7 @@ public class BingoCardsLoader : MonoBehaviour
             gameManager.cards.Add(temp2.GetComponent<CardReference>().card1);
             gameManager.cards.Add(temp2.GetComponent<CardReference>().card2);
             disablebutton78.SetActive(false);
+            scv.card2 = 2;
         }
         else if (cards4.isOn)
         {

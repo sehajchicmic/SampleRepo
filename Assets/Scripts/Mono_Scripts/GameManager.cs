@@ -26,18 +26,20 @@ public class GameManager : MonoBehaviour
     {
         
     }
-    public bool MatchChecker(int temp)
+    public bool MatchChecker(int temp)  
     {
         bool temp1 =bingoNumberDisplay.MatchChecker(temp);
         return temp1;
     }
+
     public  void Roll(TextMeshProUGUI rollsLeft)
     {
-        bingoNumberDisplay.Display(rollsLeft);
+        bingoNumberDisplay.Display(rollsLeft);  
     }
 
     public bool[] PatternCheck(bool[] temp, bool[] previous)
     {
+        
         bool[] finalResult = new bool[pattern_SO.BingoPatterns.Length];
         for (int i = 0 ; i < pattern_SO.BingoPatterns.Length ; i++)
         {
@@ -57,6 +59,7 @@ public class GameManager : MonoBehaviour
                 finalResult[i] = result;
             }
         }
+        Debug.Log ( $"inside pattern match returning value {finalResult.Length} " );
         return finalResult;
     }
 

@@ -2309,6 +2309,7 @@ MonoBehaviour:
   disablebutton78: {fileID: 1895062020608546658}
   disablebutton56: {fileID: 1895062020912723217}
   disablebutton34: {fileID: 1895062021279112176}
+  scv: {fileID: 2754278601289164404}
 --- !u!1 &1362822330
 GameObject:
   m_ObjectHideFlags: 0
@@ -7415,6 +7416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollbar: {fileID: 2562105192138850811}
+  card2: 0
 --- !u!114 &3171947649932881434
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class scrollViewSystem : MonoBehaviour
     bool temp2 = false;
     bool temp3 = false;
     bool temp4 = false;
+    public int card2 = 0;
 
     private void Start()
     {
@@ -19,10 +20,20 @@ public class scrollViewSystem : MonoBehaviour
             scrollbar.GetComponent<Scrollbar> ().value = Mathf.Lerp ( scrollbar.GetComponent<Scrollbar> ().value, 0.0018f, 0.15f );
         }
         if ( temp2 ) {
-            scrollbar.GetComponent<Scrollbar> ().value = Mathf.Lerp ( scrollbar.GetComponent<Scrollbar> ().value, 0.334f, 0.15f );
+            if ( card2 == 1 ) {
+                scrollbar.GetComponent<Scrollbar> ().value = Mathf.Lerp ( scrollbar.GetComponent<Scrollbar> ().value, 0.6665f, 0.15f );
+            } else if ( card2 == 2 ) {
+                scrollbar.GetComponent<Scrollbar> ().value = Mathf.Lerp ( scrollbar.GetComponent<Scrollbar> ().value, 0.445f, 0.15f );
+            } else {
+                scrollbar.GetComponent<Scrollbar> ().value = Mathf.Lerp ( scrollbar.GetComponent<Scrollbar> ().value, 0.334f, 0.15f );
+            }
         }
         if ( temp3 ) {
-            scrollbar.GetComponent<Scrollbar> ().value = Mathf.Lerp ( scrollbar.GetComponent<Scrollbar> ().value, 0.6665f, 0.15f );
+            if ( card2 == 2 ) {
+                scrollbar.GetComponent<Scrollbar> ().value = Mathf.Lerp ( scrollbar.GetComponent<Scrollbar> ().value, 0.886f, 0.15f );
+            } else {
+                scrollbar.GetComponent<Scrollbar> ().value = Mathf.Lerp ( scrollbar.GetComponent<Scrollbar> ().value, 0.6665f, 0.15f );
+            }
         }
         if ( temp4 ) {
             scrollbar.GetComponent<Scrollbar> ().value = Mathf.Lerp ( scrollbar.GetComponent<Scrollbar> ().value, 0.9985f, 0.15f );
