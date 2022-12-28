@@ -16,6 +16,7 @@ public class BingoNumberDisplay : MonoBehaviour
     List<int> numbers;
     int totalRolls = 5;
     int[] ExistingNumbers = new int[] { 0, 0, 0, 0, 0 };
+    bool notcalled = true;
 
     void Start()
     {
@@ -29,6 +30,10 @@ public class BingoNumberDisplay : MonoBehaviour
 
     public void Display(TextMeshProUGUI rollsLeft)
     {
+        if(notcalled) {
+            GameManager.instance.commonInAll ();
+            notcalled = false;
+        }
         if (totalRolls == 0)
         {
             Debug.Log("No Rolls Left");
@@ -64,6 +69,7 @@ public class BingoNumberDisplay : MonoBehaviour
                 bingoDisplay[i].bingoAlphabet.text = "O";
             }
             ExistingNumbers[i] = temp;
+
             GameManager.instance.AutoDaubing(temp);
         }
 

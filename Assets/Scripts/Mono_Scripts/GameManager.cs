@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour
     public Pattern_SO pattern_SO;
     public Player player;
     public SaveLoader saveLoader;
+    public List<int> presentInAll=new List<int>();
+    public scrollViewSystem cardnumber;
 
     //public List<IDictionary> Elements;
     // Start is called before the first frame update
@@ -73,38 +75,33 @@ public class GameManager : MonoBehaviour
                 finalResult[i] = result;
             }
         }
-        Debug.Log ( $"inside pattern match returning value {finalResult.Length} " );
+        //Debug.Log ( $"inside pattern match returning value {finalResult.Length} " );
         return finalResult;
+    }
+    public void commonInAll () {
+        foreach ( int number in cards [ 0 ].keyValues.Keys ) {
+            int temp = 0;
+            foreach ( CardController card in cards ) {
+                if ( card.keyValues.ContainsKey ( number ) ) {
+                    temp++;
+                    if ( temp == cards.Count ) {
+                        presentInAll.Add ( number );
+                    }
+                }
+            }
+        }
+        foreach ( int number in presentInAll ) {
+            Debug.Log ( $"{ number } present in all" );
+        }
     }
 
     public void AutoDaubing(int number)
     {
-        int temp = 0;
-        //bool returnelement=false;
-        foreach (CardController card in cards)
-        {
-            int count = 0;
-            if (card.keyValues.ContainsKey(number))
-            {
-                temp++;
-                if (temp == cards.Count)
-                {
-                    //returnelement = true;
-                    Debug.Log(number);
-                    DaubNumbers(number);
-
-                }
-            }
-            else
-            {
-                count++;
-                if (count == card.keyValues.Count)
-                {
-                    //returnelement = false;
-                }
+        foreach(int num in presentInAll) {
+            if(num== number ) {
+                DaubNumbers ( number );
             }
         }
-        //return returnelement;
     }
     public void DaubNumbers(int temp)
     {
@@ -113,7 +110,6 @@ public class GameManager : MonoBehaviour
             i.keyValues[temp].GetComponent<Button>().onClick.Invoke();
         }
     }
-
     public void GameOver()
     {
         saveLoader.SavePlayerData(player);

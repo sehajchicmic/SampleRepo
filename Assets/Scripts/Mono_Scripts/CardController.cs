@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class CardController : MonoBehaviour
 {
     //public List<GameObject> cards;
+
     public List<Button> buttons;
     public Vector2[] range;
     public bool[] patternsMatch;
@@ -14,6 +15,7 @@ public class CardController : MonoBehaviour
     public IDictionary<int, GameObject> keyValues = new Dictionary<int, GameObject>();
     bool[] pattern;
     int totalnumberofPatternsCanMade = 13;
+    //int n = 0;
 
     public struct pair
     {
@@ -23,7 +25,6 @@ public class CardController : MonoBehaviour
 
     public void Start()
     {
-        //Declaration of bool Array
         pattern = new bool[GameManager.instance.pattern_SO.BingoPatterns.Length];
         patternsMatch = new bool[25];
 
@@ -53,12 +54,11 @@ public class CardController : MonoBehaviour
 
             keyValues.Add(randomValue, buttons[index].gameObject);
         }
-        //GameManager.instance.Elements.Add((IDictionary)keyValues);
     }
 
     public void OnClicked(GameObject index, pair i)
     {
-        Debug.Log($" game object is {index is null} and index = {i.index} and value = {i.value}");
+        //Debug.Log($" game object is {index is null} and index = {i.index} and value = {i.value}");
         Debug.Log(i.index);
         bool temp = GameManager.instance.MatchChecker(i.value);
         if (temp)
@@ -70,7 +70,7 @@ public class CardController : MonoBehaviour
             int numberOfPatternsMatched = 0;
             for (int j = 0; j < pattern.Length; j++)
             {
-                Debug.Log($"Bingo Pattern Matching with Pattern {j} is {pattern[j]}");
+                //Debug.Log($"Bingo Pattern Matching with Pattern {j} is {pattern[j]}");
                 if(pattern[j])
                 {
                     BingoLineClear(j);

@@ -1841,12 +1841,14 @@ MonoBehaviour:
   player:
     playerId: 1
     playerLevel: 1
-    playerEnergy: 4
+    playerEnergy: 20
     playerCoins: 2000
     playerPowers: 25
     playerStars: 50
     playerXP: 2
   saveLoader: {fileID: 1291154796}
+  presentInAll: 
+  cardnumber: {fileID: 2754278601289164404}
 --- !u!114 &1291154795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2775,18 +2777,6 @@ MonoBehaviour:
       - m_Target: {fileID: 2080899170}
         m_TargetAssemblyTypeName: gamePanelLoader, Assembly-CSharp
         m_MethodName: LoadScene
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1335339193}
-        m_TargetAssemblyTypeName: PrefabLoader, Assembly-CSharp
-        m_MethodName: LoadPrefab
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

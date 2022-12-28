@@ -6683,6 +6683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scrollbar: {fileID: 2562105190837217614}
+  card2: 0
 --- !u!1001 &2562105190554852856
 PrefabInstance:
   m_ObjectHideFlags: 0
