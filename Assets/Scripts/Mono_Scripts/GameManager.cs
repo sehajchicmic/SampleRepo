@@ -10,8 +10,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     public BingoNumberDisplay bingoNumberDisplay;
+    public UIManager uIManager;
     public List<CardController> cards;
     public Pattern_SO pattern_SO;
+    public Player player;
+    public SaveLoader saveLoader;
+
     //public List<IDictionary> Elements;
     // Start is called before the first frame update
     void Awake()
@@ -20,6 +24,15 @@ public class GameManager : MonoBehaviour
             instance = this;
         else
             Destroy(this);
+
+    }
+    private void Start()
+    {
+        player = saveLoader.LoadPlayerData();
+        uIManager.SetCoins(player.playerCoins);
+        uIManager.SetPowers(player.playerPowers);
+        uIManager.SetEnergy(player.playerEnergy);
+        uIManager.SetStars(player.playerStars);
     }
 
     // Update is called once per frame
@@ -103,6 +116,7 @@ public class GameManager : MonoBehaviour
 
     public void GameOver()
     {
+        saveLoader.SavePlayerData(player);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

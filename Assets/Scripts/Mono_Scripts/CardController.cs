@@ -13,6 +13,7 @@ public class CardController : MonoBehaviour
     ArrayList rangeNumbers = new ArrayList();
     public IDictionary<int, GameObject> keyValues = new Dictionary<int, GameObject>();
     bool[] pattern;
+    int totalnumberofPatternsCanMade = 13;
 
     public struct pair
     {
@@ -66,13 +67,19 @@ public class CardController : MonoBehaviour
             index.GetComponent<Button>().enabled = false;
             patternsMatch[i.index] = true;
             pattern = GameManager.instance.PatternCheck(patternsMatch,pattern);
+            int numberOfPatternsMatched = 0;
             for (int j = 0; j < pattern.Length; j++)
             {
                 Debug.Log($"Bingo Pattern Matching with Pattern {j} is {pattern[j]}");
                 if(pattern[j])
                 {
                     BingoLineClear(j);
+                    numberOfPatternsMatched++;
                 }
+            }
+            if(numberOfPatternsMatched >= totalnumberofPatternsCanMade)
+            {
+                GetComponent<CanvasGroup>().blocksRaycasts = false;
             }
         }
     }

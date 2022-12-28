@@ -572,6 +572,7 @@ GameObject:
   - component: {fileID: 572784787520570301}
   - component: {fileID: 2689783173966890728}
   - component: {fileID: 5432019164171361400}
+  - component: {fileID: 8661807444184229026}
   m_Layer: 5
   m_Name: Card 2
   m_TagString: Untagged
@@ -684,7 +685,18 @@ MonoBehaviour:
   - {x: 46, y: 60}
   - {x: 61, y: 75}
   patternsMatch: 
-  bingoNumberDisplay: {fileID: 0}
+--- !u!225 &8661807444184229026
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2431013038999752321}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &2694614327040343643
 GameObject:
   m_ObjectHideFlags: 0

@@ -31,8 +31,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 6226220426835400983}
   - {fileID: 4831141601679843290}
+  - {fileID: 6226220426835400983}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -93,8 +93,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   card1: {fileID: 8457089302041033760}
   card2: {fileID: 6931547957940091629}
-  cardNumber1: {fileID: 4686211653684409364}
-  cardNumber2: {fileID: 4686211654631754974}
+  cardNumber1: {fileID: 4686211654631754974}
+  cardNumber2: {fileID: 4686211653684409364}
 --- !u!1 &4686211653684409366
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,7 +1496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9021938205021716354, guid: 0f1c661f908af44d2afe97c2ff29b07e, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9021938205021716354, guid: 0f1c661f908af44d2afe97c2ff29b07e, type: 3}
       propertyPath: m_AnchorMax.x
@@ -2565,7 +2565,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9021938205021716354, guid: 0f1c661f908af44d2afe97c2ff29b07e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9021938205021716354, guid: 0f1c661f908af44d2afe97c2ff29b07e, type: 3}
       propertyPath: m_AnchorMax.x
