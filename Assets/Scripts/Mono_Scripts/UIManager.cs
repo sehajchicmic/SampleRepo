@@ -10,7 +10,8 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI powerText;
     public TextMeshProUGUI energyText;
     public TextMeshProUGUI starText;
-    public TextMeshProUGUI xPText;
+    public TextMeshProUGUI LevelText;
+    public Slider xpSlider;
 
     public void SetCoins(int temp)
     {
@@ -28,8 +29,12 @@ public class UIManager : MonoBehaviour
     {
         starText.text = $"{temp}";
     }
+    public void SetLevel(int temp)
+    {
+        LevelText.text = $"{temp}";
+    }
     public void SetXP(int temp)
     {
-        xPText.text = $"{temp}";
+        xpSlider.value = temp;
     }
 }

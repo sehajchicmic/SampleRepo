@@ -45,7 +45,17 @@ public class BingoNumberDisplay : MonoBehaviour
         rollsLeft.text = $"{totalRolls} left";
         for (int i = 0; i < bingoDisplay.Count; i++)
         {
-            int temp = numbers[Random.Range(0, numbers.Count)];
+            int rand = Random.Range(0, 20);
+            int temp;
+            if(rand < 5 && GameManager.instance.presentInAll.Count != 0)
+            {
+                temp = GameManager.instance.presentInAll[Random.Range(0, GameManager.instance.presentInAll.Count)];
+            }
+            else
+            {
+                temp = numbers[Random.Range(0, numbers.Count)];
+            }
+            
             numbers.Remove(temp);
             bingoDisplay[i].bingoNumber.text = temp.ToString();
             if (temp <= 15)
@@ -69,7 +79,6 @@ public class BingoNumberDisplay : MonoBehaviour
                 bingoDisplay[i].bingoAlphabet.text = "O";
             }
             ExistingNumbers[i] = temp;
-
             GameManager.instance.AutoDaubing(temp);
         }
 

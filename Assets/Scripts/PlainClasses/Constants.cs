@@ -16,9 +16,22 @@ public class Constants
     #endregion
 
     #region Player Default
-
+    public static int coinsRewardOnPatternMatch = 100;
+    public static int XpRewardOnDaub = 1;
+    public static int coinsRewardOnMoneyCell = 100;
+    public static int energyRewardOnFreeEnergy = 2;
 
     #endregion
 
+    #region Powerplay
+    public class PowerPlay
+    {
+        public  static int probabilityofepic = 8; //if random between 0 to 10 is greater than 8
+        public  static int probabilityofrare = 5; //if random between 0 to 10 is greater than 5 and less then epic
 
+        public static float slidingValue = 0.1f; //Value to be incresed on every Daub
+        public static int minprobabilityNumber = 0;
+        public static int maxprobabilityNumber = 10;
+    }
+    #endregion
 }

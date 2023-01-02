@@ -13,8 +13,10 @@ public class CardController : MonoBehaviour
     public bool[] patternsMatch;
     ArrayList rangeNumbers = new ArrayList();
     public IDictionary<int, GameObject> keyValues = new Dictionary<int, GameObject>();
+    public IDictionary<int, GameObject> enabledkeyValues = new Dictionary<int, GameObject>();
     bool[] pattern;
     int totalnumberofPatternsCanMade = 13;
+    public bool Powerup = false;
     //int n = 0;
 
     public struct pair
@@ -54,17 +56,31 @@ public class CardController : MonoBehaviour
 
             keyValues.Add(randomValue, buttons[index].gameObject);
         }
+        enabledkeyValues = keyValues;
     }
 
     public void OnClicked(GameObject index, pair i)
     {
         //Debug.Log($" game object is {index is null} and index = {i.index} and value = {i.value}");
         Debug.Log(i.index);
-        bool temp = GameManager.instance.MatchChecker(i.value);
+        bool temp;
+        if(Powerup)
+        {
+             temp = true;
+        }
+        else
+        {
+            temp = GameManager.instance.MatchChecker(i.value);
+        }
         if (temp)
         {
+            Powerup = false;
+            GameManager.instance.PowerPlayReward(index);
             index.GetComponent<Image>().color = Color.green;
+            GameManager.instance.localXp += Constants.XpRewardOnDaub;
+            enabledkeyValues.Remove(i.value);
             index.GetComponent<Button>().enabled = false;
+            GameManager.instance.PowerPlaySlider();
             patternsMatch[i.index] = true;
             pattern = GameManager.instance.PatternCheck(patternsMatch,pattern);
             int numberOfPatternsMatched = 0;

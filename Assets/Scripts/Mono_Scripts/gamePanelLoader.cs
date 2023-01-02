@@ -21,6 +21,7 @@ public class gamePanelLoader : MonoBehaviour
             gameScreenPanel.SetActive(true);
             buttonPanel.SetActive(false);
             GameManager.instance.player.playerEnergy -= 1;
+            GameManager.instance.saveLoader.SavePlayerData(GameManager.instance.player);
         }
         else if (cards2.isOn && GameManager.instance.player.playerEnergy >= 2)
         {
@@ -29,6 +30,7 @@ public class gamePanelLoader : MonoBehaviour
             gameScreenPanel.SetActive(true);
             buttonPanel.SetActive(false);
             GameManager.instance.player.playerEnergy -= 2;
+            GameManager.instance.saveLoader.SavePlayerData(GameManager.instance.player);
         }
         else if (cards3.isOn && GameManager.instance.player.playerEnergy >= 3)
         {
@@ -37,6 +39,7 @@ public class gamePanelLoader : MonoBehaviour
             gameScreenPanel.SetActive(true);
             buttonPanel.SetActive(false);
             GameManager.instance.player.playerEnergy -= 3;
+            GameManager.instance.saveLoader.SavePlayerData(GameManager.instance.player);
         }
         else if (cards4.isOn && GameManager.instance.player.playerEnergy >= 4)
         {
@@ -45,6 +48,7 @@ public class gamePanelLoader : MonoBehaviour
             gameScreenPanel.SetActive(true);
             buttonPanel.SetActive(false);
             GameManager.instance.player.playerEnergy -= 4;
+            GameManager.instance.saveLoader.SavePlayerData(GameManager.instance.player);
         }
         else
         {

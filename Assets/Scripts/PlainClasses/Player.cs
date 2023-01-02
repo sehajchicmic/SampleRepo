@@ -22,6 +22,8 @@ public class Player
         this.playerEnergy = 10;
         this.playerPowers = 20;
         this.playerStars = 15;
+        this.playerLevel = 1;
+        this.playerXP = 0;
     }
 
 }
