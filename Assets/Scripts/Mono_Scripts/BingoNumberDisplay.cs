@@ -14,7 +14,7 @@ public class BingoNumberDisplay : MonoBehaviour
     }
 
     List<int> numbers;
-    int totalRolls = 5;
+    int totalRolls;
     int[] ExistingNumbers = new int[] { 0, 0, 0, 0, 0 };
     bool notcalled = true;
 
@@ -26,6 +26,7 @@ public class BingoNumberDisplay : MonoBehaviour
         {
             numbers.Add(i);
         }
+        totalRolls = GameManager.instance.totalRolls;
     }
 
     public void Display(TextMeshProUGUI rollsLeft)

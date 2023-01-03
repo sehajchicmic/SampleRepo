@@ -2384,6 +2384,7 @@ MonoBehaviour:
     powerUpImage: {fileID: 21300000, guid: 7b96c4d5e77e14d81ac38fc051dcf77e, type: 3}
   localCoins: 0
   localXp: 0
+  totalRolls: 0
 --- !u!114 &1291154795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9422,7 +9423,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 4153942959232581884}
   m_HandleRect: {fileID: 0}
@@ -11395,9 +11396,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: '5 left
-
-'
+  m_text: Please Roll
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 54ab9e1909a01490dbc75f24209f140b, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 54ab9e1909a01490dbc75f24209f140b, type: 2}

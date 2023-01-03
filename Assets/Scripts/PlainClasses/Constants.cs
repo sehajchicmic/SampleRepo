@@ -22,6 +22,12 @@ public class Constants
     public static int energyRewardOnFreeEnergy = 2;
 
     #endregion
+    #region
+    public static int totalROllsONTwoCardEntry = 5;
+    public static int totalROllsONFourCardEntry = 5;
+    public static int totalROllsONSixCardEntry = 5;
+    public static int totalROllsONEightCardEntry = 5;
+    #endregion
 
     #region Powerplay
     public class PowerPlay

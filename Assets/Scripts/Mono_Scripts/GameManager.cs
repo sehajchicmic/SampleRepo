@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     [Header("Per Match Progress")]
     public int localCoins = 0;
     public int localXp = 0;
+    public int totalRolls;
 
     [System.Serializable]
     public struct powerups
@@ -74,12 +75,6 @@ public class GameManager : MonoBehaviour
     }
     private void Start()
     {
-        GameObject tempGameObject = gameObject;
-        Debug.Log($"are equal {gameObject == tempGameObject} and refrence equal {GameObject.ReferenceEquals(gameObject, tempGameObject)} and " +
-            $"instance ids are {gameObject.GetInstanceID()} and {tempGameObject.GetInstanceID()}" +
-            $"refrence ids are {gameObject.GetHashCode()} and {tempGameObject.GetHashCode()}");
-
-
         //Loading Previous Player Prefs
         player = saveLoader.LoadPlayerData();
         if(player.playerXP > 100)
@@ -243,7 +238,7 @@ public class GameManager : MonoBehaviour
     {
         if (fillArea.fillAmount == 1 && player.playerPowers !=0)
         {
-            fillArea.fillAmount = 0;
+            
             player.playerPowers -= 1;
             Debug.Log("PowerPlayCalled");
             foreach (CardController card in cards)
@@ -275,6 +270,7 @@ public class GameManager : MonoBehaviour
                     randomSelectedTile.GetComponent<Image>().sprite = powerPlay.sprite;
                 }
             }
+            fillArea.fillAmount = 0;
             Powerplay();
         }
         

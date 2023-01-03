@@ -13,6 +13,142 @@ MonoBehaviour:
   m_Name: VillageData
   m_EditorClassIdentifier: 
   villageList:
+  - villageSprite: {fileID: 21300000, guid: 57cfab21282454b878cf313e4d17e89d, type: 3}
+    isLocked: 0
+    items:
+    - itemSprite: {fileID: 21300000, guid: 5c93ecd017a714780a3495987f1f4968, type: 3}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 21300000, guid: 4d552153005a74ce78b7e63f23b5e54d, type: 3}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 21300000, guid: 4beb2bbbda8134de08de0a92b06f5d01, type: 3}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 21300000, guid: 8efe9d0b614a34d8a97f5709f06aa7ef, type: 3}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 21300000, guid: 7b96c4d5e77e14d81ac38fc051dcf77e, type: 3}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+  - villageSprite: {fileID: 21300000, guid: 178c546b46525410a9a5a9c9b68adfca, type: 3}
+    isLocked: 1
+    items:
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
   - villageSprite: {fileID: 0}
     isLocked: 1
     items:
@@ -30,19 +166,59 @@ MonoBehaviour:
       - destroyItem: {fileID: 0}
       - destroyItem: {fileID: 0}
     - itemSprite: {fileID: 0}
-      upgradeLevel: []
-      destroyLevel: []
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
     - itemSprite: {fileID: 0}
-      upgradeLevel: []
-      destroyLevel: []
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
     - itemSprite: {fileID: 0}
-      upgradeLevel: []
-      destroyLevel: []
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
     - itemSprite: {fileID: 0}
-      upgradeLevel: []
-      destroyLevel: []
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
   - villageSprite: {fileID: 0}
-    isLocked: 0
+    isLocked: 1
     items:
     - itemSprite: {fileID: 0}
       upgradeLevel:
@@ -58,38 +234,462 @@ MonoBehaviour:
       - destroyItem: {fileID: 0}
       - destroyItem: {fileID: 0}
     - itemSprite: {fileID: 0}
-      upgradeLevel: []
-      destroyLevel: []
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
     - itemSprite: {fileID: 0}
-      upgradeLevel: []
-      destroyLevel: []
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
     - itemSprite: {fileID: 0}
-      upgradeLevel: []
-      destroyLevel: []
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
     - itemSprite: {fileID: 0}
-      upgradeLevel: []
-      destroyLevel: []
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
   - villageSprite: {fileID: 0}
-    isLocked: 0
-    items: []
+    isLocked: 1
+    items:
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
   - villageSprite: {fileID: 0}
-    isLocked: 0
-    items: []
+    isLocked: 1
+    items:
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
   - villageSprite: {fileID: 0}
-    isLocked: 0
-    items: []
+    isLocked: 1
+    items:
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
   - villageSprite: {fileID: 0}
-    isLocked: 0
-    items: []
+    isLocked: 1
+    items:
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
   - villageSprite: {fileID: 0}
-    isLocked: 0
-    items: []
+    isLocked: 1
+    items:
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
   - villageSprite: {fileID: 0}
-    isLocked: 0
-    items: []
-  - villageSprite: {fileID: 0}
-    isLocked: 0
-    items: []
-  - villageSprite: {fileID: 0}
-    isLocked: 0
-    items: []
+    isLocked: 1
+    items:
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+    - itemSprite: {fileID: 0}
+      upgradeLevel:
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      - upgradeItem: {fileID: 0}
+      destroyLevel:
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}
+      - destroyItem: {fileID: 0}

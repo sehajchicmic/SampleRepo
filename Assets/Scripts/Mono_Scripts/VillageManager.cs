@@ -8,12 +8,18 @@ public class VillageManager : MonoBehaviour
 {
     public Image VillagePrefab;
     public Transform content;
-    public GameObject contentView;
+    //public GameObject contentView;
     public Sprite lockedVillageImage;
     public Sprite unlockedVillageImage;
 
 
     public List<Village> villages;
+    public GameObject prefab;
+    public Transform parent;
+    public VillageData_SO data_SO;
+    public int currentVillagenumber = 1;
+    Village currentVillage;
+
 
 
     public void Awake()
@@ -25,7 +31,9 @@ public class VillageManager : MonoBehaviour
     void Start()
     {
         Init();
-        LoadImageMap();
+        //LoadImageMap();
+        LoadVillage();
+        GenerateItem();
     }
 
     private void Init()
@@ -33,11 +41,24 @@ public class VillageManager : MonoBehaviour
         villages = new List<Village>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void LoadVillage()
     {
-
+        currentVillage = data_SO.villageList[currentVillagenumber - 1];
     }
+    public void GenerateItem()
+    {
+        for (int i = 0; i < currentVillage.items.Length; i++)
+        {
+            GameObject item = Instantiate(prefab, parent);
+            item.GetComponent<ItemReference>().itemImage.sprite = currentVillage.items[i].itemSprite;
+        }
+    }
+
+    //// Update is called once per frame
+    //void Update()
+    //{
+
+    //}
 
     void LoadImageMap()
     {

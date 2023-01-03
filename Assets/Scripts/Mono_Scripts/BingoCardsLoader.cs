@@ -29,6 +29,7 @@ public class BingoCardsLoader : MonoBehaviour
             disablebutton56.SetActive(false);
             disablebutton78.SetActive(false);
             scv.card2 = 1;
+            gameManager.totalRolls = Constants.totalROllsONTwoCardEntry;
         }
         else if (cards2.isOn)
         {
@@ -45,6 +46,7 @@ public class BingoCardsLoader : MonoBehaviour
             disablebutton56.SetActive(false);
             disablebutton78.SetActive(false);
             scv.card2 = 2;
+            gameManager.totalRolls = Constants.totalROllsONFourCardEntry;
         }
         else if(cards3.isOn)
         {
@@ -65,6 +67,7 @@ public class BingoCardsLoader : MonoBehaviour
             temp2.GetComponent<CardReference>().cardNumber2.text = "Card 6";
             disablebutton78.SetActive(false);
             scv.card2 = 3;
+            gameManager.totalRolls = Constants.totalROllsONSixCardEntry;
         }
         else if (cards4.isOn)
         {
@@ -89,6 +92,7 @@ public class BingoCardsLoader : MonoBehaviour
             temp3.GetComponent<CardReference>().cardNumber1.text = "Card 7";
             temp3.GetComponent<CardReference>().cardNumber2.text = "Card 8";
             scv.card2 = 4;
+            gameManager.totalRolls = Constants.totalROllsONEightCardEntry;
         }
     }
 }
