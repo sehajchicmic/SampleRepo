@@ -26,7 +26,7 @@ public class VillageItems
     //public int Items;
     public Sprite itemSprite;
     public UpgradeItem[] upgradeLevel;
-    public DestroyItem[] destroyLevel;
+    //public DestroyItem[] destroyLevel;
     //public int UpgradeLevelOfItem;
     //public bool IsItemFullyMaxed;
     //public int ItemHealth;
@@ -41,6 +41,7 @@ public class VillageItems
 public class UpgradeItem
 {
     public Sprite upgradeItem;
+    public DestroyItem[] destroyLevel;
 }
 [System.Serializable]
 public class DestroyItem

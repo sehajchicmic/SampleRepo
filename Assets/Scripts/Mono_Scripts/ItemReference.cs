@@ -2,13 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class ItemReference : MonoBehaviour
 {
-    public Image itemImage;
-    public Image nextFixImage;
-    public Button fixButton;
-
+    public Image itemImageCurrentLevel;
+    public Image itemImageNextLevel;
+    public Button updateButton;
+    public TextMeshProUGUI buttonText;
+    public TextMeshProUGUI coinsRequiredText;
     public int currentUpgradeLevel = 0;
     public int currentDestroyLevel = 4;
 }
