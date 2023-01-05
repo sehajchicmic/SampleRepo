@@ -7,6 +7,8 @@ using UnityEngine.UI;
 
 public class VillageManager : MonoBehaviour
 {
+    public VillageUpgrade villageUpgrade;
+    public VillageShop villageShop;
     public Image VillagePrefab;
     public Transform content;
     //public GameObject contentView;
@@ -15,22 +17,15 @@ public class VillageManager : MonoBehaviour
 
 
     public List<Village> villages;
-    public GameObject prefab;
-    public Transform parent;
+    
     public VillageData_SO data_SO;
     public int currentVillagenumber = 0;
-    Village currentVillage;
-    List<int> itemsUpgradeLevel = new List<int>() { 0, 0, 0, 0, 0 };
+    public Village currentVillage;
 
-    public GameObject fixPrefab;
-    public Transform fixParent;
-    int currentUpgradeLevel=0;
-    //int currentDestroyLevel;
-
-    List<int> currentDestroyLevel=new List<int> { 4,4,4,4,4};
-
-
-
+    public Image villageImage;
+    public Image itemImage;
+    public List<int> itemsUpgradeLevel = new List<int>() { 0, 0, 0, 0, 0 };
+    public List<int> currentDestroyLevel = new List<int> { 0, 0, 0, 4, 4 };
 
 
     public void Awake()
@@ -49,7 +44,7 @@ public class VillageManager : MonoBehaviour
         //}
         Init ();
         //LoadImageMap();
-        LoadVillage();
+        
         //GenerateItem();
         //fix ();
     }
@@ -57,63 +52,13 @@ public class VillageManager : MonoBehaviour
     private void Init()
     {
         villages = new List<Village>();
+        villages = data_SO.villageList;
+        LoadImageMap();
     }
 
-    #region Village
+   
 
-    public Image villageImage;
-    public Image itemImage;
-    public void LoadVillage()
-    {
-        currentVillage = data_SO.villageList[currentVillagenumber];
-        villageImage.sprite = currentVillage.villageSprite;
-        UpgradeItem();
-    }
-    public void UpgradeItem()
-    {
-        itemsUpgradeLevel[0] += 1;
-        itemImage.sprite = currentVillage.items[0].upgradeLevel[itemsUpgradeLevel[0]].upgradeItem;
-    }
-    public void DestroyItem()
-    {
-
-    }
-    #endregion
-
-    #region Upgrade Items in Village Shop
-    public void GenerateItem()
-    {
-        for (int i = 0; i < currentVillage.items.Length; i++)
-        {
-            GameObject item = Instantiate(prefab, parent);
-            item.GetComponent<ItemReference>().itemImageCurrentLevel.sprite = currentVillage.items[i].upgradeLevel[itemsUpgradeLevel[i]].upgradeItem;
-            item.GetComponent<ItemReference>().itemImageNextLevel.sprite = currentVillage.items[i].upgradeLevel[itemsUpgradeLevel[i] + 1].upgradeItem;
-            int temp = i;
-            item.GetComponent<ItemReference>().updateButton.onClick.AddListener(delegate { onClickUpgrade(temp, item); });
-        }
-    }
-    public void onClickUpgrade(int itemIndex, GameObject item)
-    {
-        //Debug.Log($"onClicked Pressed {itemIndex} { itemsUpgradeLevel.Count}");
-        itemsUpgradeLevel[itemIndex] += 1;
-        Debug.Log($"{itemsUpgradeLevel[itemIndex]}");
-        item.GetComponent<ItemReference>().itemImageCurrentLevel.sprite = currentVillage.items[itemIndex].upgradeLevel[itemsUpgradeLevel[itemIndex]].upgradeItem;
-        if (itemsUpgradeLevel[itemIndex] + 1 == currentVillage.items[itemIndex].upgradeLevel.Length)
-        {
-            Debug.Log("Completed");
-            item.GetComponent<ItemReference>().updateButton.enabled = false;
-            item.GetComponent<ItemReference>().itemImageNextLevel.enabled = false;
-        }
-        else
-        {
-            item.GetComponent<ItemReference>().itemImageNextLevel.sprite = currentVillage.items[itemIndex].upgradeLevel[itemsUpgradeLevel[itemIndex] + 1].upgradeItem;
-        }
-    }
-    public void UpgradeLevel()
-    {
-
-    }
-    #endregion
+   
 
     //// Update is called once per frame
     //void Update()
@@ -121,52 +66,50 @@ public class VillageManager : MonoBehaviour
 
     //}
 
-    void LoadImageMap()
+    public void LoadImageMap()
     {
         foreach (Village v in villages)
         {
-            Image village = Instantiate(VillagePrefab, new Vector3(0, 0, 0), Quaternion.identity, content.transform);
-            village.sprite = lockedVillageImage;
+            Image village = Instantiate(VillagePrefab,content.transform);
+            village.sprite = v.villageMapSprite;
 
-            if (!v.isLocked)
-            {
-                village.sprite = unlockedVillageImage;
-            }
+            //if (!v.isLocked)
+            //{
+            //    village.sprite = unlockedVillageImage;
+            //}
 
         }
     }
-    //public void Attack () {
-    //    currentVillage.items [ currentVillagenumber-1 ].upgradeLevel [ currentUpgradeLevel ].upgradeItem = currentVillage.items [ currentVillagenumber-1 ].upgradeLevel [ currentUpgradeLevel ].destroyLevel [ currentDestroyLevel + 1 ].destroyItem;
-    //    currentDestroyLevel += 1;
-    //    prefab.GetComponentInChildren<Button> ().GetComponentInChildren<Text> ().text = "fix";
-    //}
-    #region item fix
-    public void fix () {
-        for ( int i = 0; i < currentVillage.items.Length; i++ ) {
-            GameObject item = Instantiate ( fixPrefab, fixParent );
-            currentUpgradeLevel = item.GetComponent<ItemReference> ().currentUpgradeLevel;
-            currentDestroyLevel [i] = item.GetComponent<ItemReference> ().currentDestroyLevel;
-            item.GetComponent<ItemReference> ().itemImageCurrentLevel.sprite = currentVillage.items [ 0 ].upgradeLevel [ i ].destroyLevel [ currentDestroyLevel[i] ].destroyItem;//currentVillage.items [ i ].upgradeLevel[currentUpgradeLevel].destroyLevel[currentDestroyLevel].destroyItem;
-            item.GetComponent<ItemReference> ().itemImageNextLevel.sprite = currentVillage.items [ 0 ].upgradeLevel [ i ].destroyLevel [ currentDestroyLevel[i] - 1 ].destroyItem;
-            int temp = i; 
-            item.GetComponent<ItemReference> ().buttonText.text = "fix";
-            item.GetComponent<ItemReference> ().updateButton.onClick.AddListener ( delegate { onClick (item,temp); } );
+    public void Attack(int itemIndex)
+    {
+        Debug.Log($"{itemIndex} {currentDestroyLevel.Count}");
+        if (currentDestroyLevel[itemIndex] != 4)
+        {
+            currentDestroyLevel[itemIndex] += 1;
         }
+        //foreach(Image item in villageUpgrade.currentItems)
+        //{
+        //    Destroy(item.gameObject);
+        //}
+        //villageUpgrade.currentItems.Clear();
+        Image image = villageUpgrade.currentItems[itemIndex];
+        Destroy(image.gameObject);
+
+        Image item = Instantiate(itemImage, villageImage.transform);
+        item.transform.localPosition = currentVillage.items[itemIndex].spawnPoint;
+        if (currentDestroyLevel[itemIndex] == 0)
+        {
+            item.sprite = currentVillage.items[itemIndex].upgradeLevel[itemsUpgradeLevel[itemIndex]].upgradeItem;
+        }
+        else
+        {
+            item.sprite = currentVillage.items[itemIndex].upgradeLevel[itemsUpgradeLevel[itemIndex]].destroyLevel[currentDestroyLevel[itemIndex]].destroyItem;
+        }
+        int index = itemIndex;
+        villageUpgrade.currentItems[itemIndex] = item;
+
+        item.GetComponentInChildren<Button>().onClick.AddListener(delegate { Attack(index); });
+
+        //villageUpgrade.LoadVillage();
     }
-    private void onClick (GameObject item,int temp) {
-        if ( currentDestroyLevel[temp] <= 0 ) {
-            item.GetComponent<ItemReference> ().updateButton.enabled = false;
-            return;
-        }
-        Debug.Log ( "onClick called" );
-        item.GetComponent<ItemReference> ().itemImageCurrentLevel.sprite = currentVillage.items [ 0 ].upgradeLevel [ currentUpgradeLevel ].destroyLevel [ currentDestroyLevel[temp]-1 ].destroyItem;
-        if ( currentDestroyLevel[temp] <= 1 ) {
-            item.GetComponent<ItemReference> ().itemImageNextLevel.enabled = false;
-        } else {
-            item.GetComponent<ItemReference> ().itemImageNextLevel.sprite = currentVillage.items [ 0 ].upgradeLevel [ currentUpgradeLevel ].destroyLevel [ currentDestroyLevel[temp] - 2 ].destroyItem;
-        }
-        currentDestroyLevel[temp] -= 1;
-        Debug.Log ( $"Current Destroy Level:-{currentDestroyLevel[temp]+1}" );
-    }
-    #endregion
 }

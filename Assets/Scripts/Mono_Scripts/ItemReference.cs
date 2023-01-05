@@ -11,6 +11,5 @@ public class ItemReference : MonoBehaviour
     public Button updateButton;
     public TextMeshProUGUI buttonText;
     public TextMeshProUGUI coinsRequiredText;
-    public int currentUpgradeLevel = 0;
-    public int currentDestroyLevel = 4;
+    
 }

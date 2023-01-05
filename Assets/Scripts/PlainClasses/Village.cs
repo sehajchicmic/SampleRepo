@@ -5,7 +5,8 @@ using UnityEngine;
 [System.Serializable]
 public class Village
 {
-    public Sprite villageSprite;
+    public Sprite villageMapSprite;
+    public Sprite villageBackgroundSprite;
     public bool isLocked;
     public Village(bool isLocked)
     {
@@ -25,6 +26,7 @@ public class VillageItems
 {
     //public int Items;
     public Sprite itemSprite;
+    public Vector3 spawnPoint;
     public UpgradeItem[] upgradeLevel;
     //public DestroyItem[] destroyLevel;
     //public int UpgradeLevelOfItem;
