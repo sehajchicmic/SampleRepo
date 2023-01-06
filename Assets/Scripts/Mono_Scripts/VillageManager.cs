@@ -2,15 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-
+//using UnityEngine.UIElements;
 
 public class VillageManager : MonoBehaviour
 {
     public VillageUpgrade villageUpgrade;
     public VillageShop villageShop;
-    public Image VillagePrefab;
-    public Transform content;
+    
     //public GameObject contentView;
     public Sprite lockedVillageImage;
     public Sprite unlockedVillageImage;
@@ -27,6 +27,7 @@ public class VillageManager : MonoBehaviour
     public List<int> itemsUpgradeLevel = new List<int>() { 0, 0, 0, 0, 0 };
     public List<int> currentDestroyLevel = new List<int> { 0, 0, 0, 4, 4 };
 
+    
 
     public void Awake()
     {
@@ -53,7 +54,7 @@ public class VillageManager : MonoBehaviour
     {
         villages = new List<Village>();
         villages = data_SO.villageList;
-        LoadImageMap();
+        //LoadImageMap();
     }
 
    
@@ -66,20 +67,7 @@ public class VillageManager : MonoBehaviour
 
     //}
 
-    public void LoadImageMap()
-    {
-        foreach (Village v in villages)
-        {
-            Image village = Instantiate(VillagePrefab,content.transform);
-            village.sprite = v.villageMapSprite;
-
-            //if (!v.isLocked)
-            //{
-            //    village.sprite = unlockedVillageImage;
-            //}
-
-        }
-    }
+    
     public void Attack(int itemIndex)
     {
         Debug.Log($"{itemIndex} {currentDestroyLevel.Count}");
@@ -111,5 +99,10 @@ public class VillageManager : MonoBehaviour
         item.GetComponentInChildren<Button>().onClick.AddListener(delegate { Attack(index); });
 
         //villageUpgrade.LoadVillage();
+    }
+
+    public void BingoLoader()
+    {
+        SceneManager.LoadScene("BingoStarterScene");
     }
 }

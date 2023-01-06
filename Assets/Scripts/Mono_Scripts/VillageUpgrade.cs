@@ -13,58 +13,72 @@ public class VillageUpgrade : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        LoadVillage();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    #region Village
-
-
-    public void LoadVillage()
-    {
+        //LoadVillage();
         villageManager.currentVillage = villageManager.data_SO.villageList[villageManager.currentVillagenumber];
         villageManager.villageImage.sprite = villageManager.currentVillage.villageBackgroundSprite;
-        for (int i = 0; i < villageManager.currentVillage.items.Length; i++)
+        currentItems = new List<Image>();
+        //Debug.Log($"{villageManager.currentVillage.items.Length}");
+        for (int i = 0; i<villageManager.currentVillage.items.Length; i++)
         {
-            Image item = Instantiate(villageManager.itemImage, villageManager.villageImage.transform);
-            item.transform.localPosition = villageManager.currentVillage.items[i].spawnPoint;
-            if(villageManager.currentDestroyLevel[i] == 0)
-            {
-                item.sprite = villageManager.currentVillage.items[i].upgradeLevel[villageManager.itemsUpgradeLevel[i]].upgradeItem;
-            }
-            else
-            {
-                item.sprite = villageManager.currentVillage.items[i].upgradeLevel[villageManager.itemsUpgradeLevel[i]].destroyLevel[villageManager.currentDestroyLevel[i]].destroyItem;
-            }
-            int index = i;
-            currentItems.Add(item);
-
-            item.GetComponentInChildren<Button>().onClick.AddListener(delegate { villageManager.Attack(index); });
+            //Debug.Log("0");
+            InstatiateItem(i);
         }
-        //UpgradeItem();
     }
-    public void UpgradeItem(Sprite item, int index)
+
+    public void InstatiateItem(int index)
     {
-        //villageManager.itemsUpgradeLevel[index] += 1;
-        currentItems[index].transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        //Debug.Log($"1 {currentItems.Count}");
+        
 
-        StartCoroutine(RegainScale(item, 0.5f, index));
-
-
+        if(villageManager.currentDestroyLevel[index] == 0)
+        {
+            //Debug.Log("2");
+            SpawnUpgradedImage(index);
+        }
+        else
+        {
+            //Debug.Log("2");
+            SpawnDamagedImage(index);
+        }
     }
 
-    IEnumerator RegainScale(Sprite item, float time, int index)
+    public void SpawnUpgradedImage(int index)
     {
-        yield return new WaitForSeconds(time);
-        currentItems[index].sprite = item;
-        currentItems[index].transform.DOScale(new Vector3(1, 1, 1), 0.5f);
-        //item = villageManager.currentVillage.items[index].upgradeLevel[villageManager.itemsUpgradeLevel[index]].upgradeItem;
-        //item.DOScale(new Vector3(1, 1, 1), 0.5f);
+        //Debug.Log("3");
+        Image item = Instantiate(villageManager.itemImage, villageManager.villageImage.transform);
+        item.transform.localPosition = villageManager.currentVillage.items[index].spawnPoint;
+        item.sprite = villageManager.currentVillage.items[index].upgradeLevel[villageManager.itemsUpgradeLevel[index]].upgradeItem;
+        if (currentItems.Count + 1 > villageManager.currentVillage.items.Length)
+        {
+            Destroy(currentItems[index].gameObject);
+            currentItems[index] = item;
+        }
+        else
+        {
+            currentItems.Add(item);
+        }
+        item.transform.DOScale(new Vector3(2, 2, 2), 0f);
+        item.transform.DOScale(new Vector3(1, 1, 1), 1f);
+        item.gameObject.GetComponentInChildren<Button>().onClick.AddListener(delegate { villageManager.Attack(index); });
     }
-    #endregion Village
+
+    public void SpawnDamagedImage(int index)
+    {
+        //Debug.Log("3");
+        Image item = Instantiate(villageManager.itemImage, villageManager.villageImage.transform);
+        item.transform.localPosition = villageManager.currentVillage.items[index].spawnPoint;
+        item.sprite = villageManager.currentVillage.items[index].upgradeLevel[villageManager.itemsUpgradeLevel[index]].destroyLevel[villageManager.currentDestroyLevel[index]].destroyItem;
+        if (currentItems.Count  +1 > villageManager.currentVillage.items.Length)
+        {
+            Destroy(currentItems[index].gameObject);
+            currentItems[index] = item;
+        }
+        else
+        {
+            currentItems.Add(item);
+        }
+        item.transform.DOScale(new Vector3(2, 2, 2), 0f);
+        item.transform.DOScale(new Vector3(1, 1, 1), 1f);
+        item.GetComponentInChildren<Button>().onClick.AddListener(delegate { villageManager.Attack(index); });
+    }
 }
